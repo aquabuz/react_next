@@ -1,10 +1,10 @@
 import Link from "next/link";
-import articleStyles from "../styles/Article.module.scss";
+import * as style from "../styles/Article.module.scss";
 
 const ArticleItem = ({ article }) => {
   return (
     <Link href={`/article/${article.id}`}>
-      <a className={articleStyles.card}>
+      <a className={style.card}>
         <h3>{article.title} &rarr;</h3>
       </a>
     </Link>
