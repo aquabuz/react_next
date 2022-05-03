@@ -2,14 +2,11 @@
   "name": "next",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/aquabuz/react_next",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "12.1.5",
@@ -19,7 +16,6 @@
   "devDependencies": {
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
-    "gh-pages": "^3.2.3",
     "sass": "^1.51.0"
   }
 }

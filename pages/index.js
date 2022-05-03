@@ -15,12 +15,19 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-  const articles = await res.json();
-
-  return {
-    props: {
-      articles,
-    },
-  };
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    const articles = await res.json();
+    return {
+      props: {
+        articles,
+      },
+      revalidate: 10,
+    };
+  } catch (error) {
+    res.statusCode = 404;
+    return {
+      props: {},
+    };
+  }
 };
